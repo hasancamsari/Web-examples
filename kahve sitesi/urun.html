@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="backgimg"></div>
+    <div class="serit">
+        <div class="button">
+            <label for="menuToggle">
+                <img src="logo.png" alt="menu">
+            </label>
+            <div class="logoisim"><span>Kahve </span><span id="rotateText">&</span><span> Kahve</span></div>
+            <ul id="nav-list">
+                <li class="nav-item"><a class="nav-link" href="anasayfa.html">Anasayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="sihirbaz.html">İçerik Sihirbazı</a></li>
+                <li class="nav-item"><a class="nav-link" href="urun.html">Ürünler</a></li>
+                <li class="nav-item"><a class="nav-link" href="sosyal.html">Bizi Takip Edin</a></li>
+                <li class="nav-item"><a class="nav-link" href="yorum.html">Yorum Yap</a></li>
+                <li class="nav-item"><a class="nav-link" href="travel.html">Kahvenin Yolculuğu</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="uruncont">
+
+        <div class="resimler">
+        <img src="termos1.png" alt="Resim 1" width="230" height="230" onclick="resmeTikla(360)">
+        <img src="termos2.png" alt="Resim 2" width="230" height="230" onclick="resmeTikla(990)">
+        <img src="termos3.png" alt="Resim 3" width="230" height="230" onclick="resmeTikla(400)">
+        <img src="termos4.png" alt="Resim 4" width="230" height="230" onclick="resmeTikla(650)">
+        <img src="termos5.png" alt="Resim 5" width="230" height="230" onclick="resmeTikla(1100)">
+    
+        </div>
+        <div class="fiyat">
+            <span class="bilgi">360₺</span>
+            <span class="bilgi">990₺</span>
+            <span class="bilgi">400₺</span>
+            <span class="bilgi">650₺</span>
+            <span class="bilgi">1100₺</span>
+        </div>
+       <div class="resimleralt">
+            <img src="bardak1.png" alt="Resim 6" width="230" height="230" onclick="resmeTikla(290);">
+            <img src="bardak2.png" alt="Resim 7" width="230" height="230" onclick="resmeTikla(190)">
+            <img src="bardak3.png" alt="Resim 8" width="230" height="230" onclick="resmeTikla(160)">
+            <img src="bardak4.png" alt="Resim 9" width="230" height="230" onclick="resmeTikla(160)">
+            <img src="bardak5.png" alt="Resim 10" width="230" height="230" onclick="resmeTikla(240)">
+        </div>
+        <div class="fiyat">
+            <span class="bilgi">290₺</span>
+            <span class="bilgi">190₺</span>
+            <span class="bilgi">160₺</span>
+            <span class="bilgi">160₺</span>
+            <span class="bilgi">240₺</span>
+        </div>
+
+        <div class="sepetcont">
+            <span class="sepettext"><a href="sepetpush">Sepet</a></span>
+            <div class="sepet" id="sepetDiv"></div>
+            <div class="sepetic" id="sepetdivic">
+                <button class="satinalma" id="almak" onclick="showModal()">Satın Al</button>
+            </div>
+        </div>
+    
+        <div id="modal" class="modal" onclick="closeModal()">
+            <div class="modal-content" onclick="stopPropagation(event)">
+                <form>
+                    <label for="name">İsim:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">E-posta Adresi:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="cardNumber">Kart Numarası:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{1,16}" placeholder="1234567891011121" required>
+                    <br>
+                    <label for="expiryDate">Son Kullanma Tarihi:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" pattern="[0-9]{1,4}" placeholder="MM/YY" required>
+                    <br>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" pattern="[0-9]{1,3}" placeholder="123" required>
+                    <br>
+                    <input type="submit" value="Satın Al">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="java.js"> </script>
+    
+</body>
+</html>
